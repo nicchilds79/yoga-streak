@@ -1,9 +1,9 @@
 const POSES = [
-  { sanskrit: "Vṛkṣāsana", phonetic: "vrik-SHAH-suh-nuh", english: "Tree Pose", emoji: "🌳", hook: "Vriksha means tree: root down before you grow up.", cue: "Press foot and inner thigh together; find one still point." },
-  { sanskrit: "Utkatasana", phonetic: "oot-kah-TAH-suh-nuh", english: "Chair Pose", emoji: "🪑", hook: "Think: ‘oof, cut a seat’—then sit back into your invisible chair.", cue: "Send hips back, keep weight in the heels and lengthen the spine." },
-  { sanskrit: "Trikonasana", phonetic: "trik-con-AH-suh-nuh", english: "Triangle Pose", emoji: "🔺", hook: "Tri-kona: three angles make a triangle.", cue: "Reach forward before tipping; stack the shoulders without collapsing the waist." },
-  { sanskrit: "Vīrabhadrāsana II", phonetic: "veer-uh-buh-DRAH-suh-nuh two", english: "Warrior II", emoji: "🏹", hook: "Vīrabhadra is the fierce warrior; gaze calmly beyond the front hand.", cue: "Front knee tracks over toes; press through the back foot and soften the shoulders." },
-  { sanskrit: "Adho Mukha Śvānāsana", phonetic: "AH-doh MOO-kah shvah-NAH-suh-nuh", english: "Downward-Facing Dog", emoji: "🐕", hook: "Adho = down, mukha = face, śvāna = dog.", cue: "Lift the sitting bones, lengthen the spine and let the heels be heavy—not forced." }
+  { sanskrit: "Vṛkṣāsana", phonetic: "vrik-SHAH-suh-nuh", spoken: "vrik shah suh nuh", english: "Tree Pose", emoji: "🌳", hook: "Vriksha means tree: root down before you grow up.", cue: "Press foot and inner thigh together; find one still point." },
+  { sanskrit: "Utkatasana", phonetic: "oot-kah-TAH-suh-nuh", spoken: "oot kah tah suh nuh", english: "Chair Pose", emoji: "🪑", hook: "Think: ‘oof, cut a seat’—then sit back into your invisible chair.", cue: "Send hips back, keep weight in the heels and lengthen the spine." },
+  { sanskrit: "Trikonasana", phonetic: "trik-con-AH-suh-nuh", spoken: "trick cone ah suh nuh", english: "Triangle Pose", emoji: "🔺", hook: "Tri-kona: three angles make a triangle.", cue: "Reach forward before tipping; stack the shoulders without collapsing the waist." },
+  { sanskrit: "Vīrabhadrāsana II", phonetic: "veer-uh-buh-DRAH-suh-nuh two", spoken: "veer uh buh drah suh nuh two", english: "Warrior II", emoji: "🏹", hook: "Vīrabhadra is the fierce warrior; gaze calmly beyond the front hand.", cue: "Front knee tracks over toes; press through the back foot and soften the shoulders." },
+  { sanskrit: "Adho Mukha Śvānāsana", phonetic: "AH-doh MOO-kah shvah-NAH-suh-nuh", spoken: "ah doh moo kah shvah nah suh nuh", english: "Downward-Facing Dog", emoji: "🐕", hook: "Adho = down, mukha = face, śvāna = dog.", cue: "Lift the sitting bones, lengthen the spine and let the heels be heavy—not forced." }
 ];
 
 const GOAL = 8;
@@ -118,11 +118,23 @@ function completeLesson() {
   save(); updateDashboard(); show("complete");
 }
 function pronounce(pose) {
-  if (!("speechSynthesis" in window)) return;
-  speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(pose.sanskrit);
-  utterance.rate = .68; utterance.pitch = 1;
-  speechSynthesis.speak(utterance);
+  if (!("speechSynthesis" in window)) {
+    alert("Pronunciation audio is not supported by this browser. Please open Yoga Streak in Safari.");
+    return;
+  }
+  const synth = window.speechSynthesis;
+  const utterance = new SpeechSynthesisUtterance(pose.spoken);
+  const voices = synth.getVoices();
+  const voice = voices.find(v => v.lang === "en-GB") || voices.find(v => v.lang.startsWith("en"));
+  if (voice) utterance.voice = voice;
+  utterance.lang = voice?.lang || "en-GB";
+  utterance.rate = .72;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  utterance.onerror = () => alert("Your device could not play the pronunciation. Check that Silent Mode is off, then try again in Safari.");
+  synth.cancel();
+  synth.resume();
+  setTimeout(() => synth.speak(utterance), 80);
 }
 function startLesson() { state.hearts = 5; state.lessonIndex = 0; state.questions = makeQuestions(); show("lesson"); renderQuestion(); }
 function renderLibrary() {
