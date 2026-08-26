@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#23483f">
+  <meta name="description" content="A ten-minute daily yoga teacher training practice.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Yoga Streak</title>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">YOUR DAILY PRACTICE</p>
+        <h1>Yoga Streak</h1>
+      </div>
+      <div class="avatar" aria-hidden="true">ॐ</div>
+    </header>
+
+    <section class="stats" aria-label="Your progress">
+      <div><span>🔥</span><strong id="streak">0</strong><small>day streak</small></div>
+      <div><span>✨</span><strong id="xp">0</strong><small>total XP</small></div>
+      <div><span>💗</span><strong id="hearts">5</strong><small>hearts</small></div>
+    </section>
+
+    <section id="home" class="screen active">
+      <div class="hero-card">
+        <div class="sun"></div>
+        <div class="pose-figure" aria-hidden="true">🧘‍♀️</div>
+        <div class="hero-copy">
+          <p>DAY <span id="day-number">1</span></p>
+          <h2>Ten minutes. One stronger teacher.</h2>
+          <p class="subtle">Names, pronunciation, cues and memory hooks—little and often.</p>
+        </div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-head"><strong>Today’s goal</strong><span id="goal-label">0 / 8</span></div>
+        <div class="progress"><span id="goal-progress"></span></div>
+        <p>Complete 8 questions to protect your streak.</p>
+      </div>
+
+      <button id="start" class="primary">Start today’s practice <span>→</span></button>
+      <button id="library-button" class="secondary">Explore pose library</button>
+    </section>
+
+    <section id="lesson" class="screen" aria-live="polite">
+      <div class="lesson-top">
+        <button id="close-lesson" class="icon-button" aria-label="Close lesson">×</button>
+        <div class="progress lesson-progress"><span id="lesson-progress"></span></div>
+        <span class="heart-count">💗 <b id="lesson-hearts">5</b></span>
+      </div>
+      <p class="eyebrow" id="question-type">NAME THAT POSE</p>
+      <h2 id="question">What is this pose called?</h2>
+      <div id="prompt-card" class="prompt-card"></div>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="continue" class="primary hidden">Continue</button>
+    </section>
+
+    <section id="library" class="screen">
+      <div class="screen-heading">
+        <button id="back-home" class="icon-button" aria-label="Back">←</button>
+        <div><p class="eyebrow">REFERENCE</p><h2>Pose library</h2></div>
+      </div>
+      <div id="pose-list" class="pose-list"></div>
+    </section>
+
+    <section id="complete" class="screen complete-screen">
+      <div class="celebration">🔥</div>
+      <p class="eyebrow">DAILY GOAL COMPLETE</p>
+      <h2>Your streak is safe.</h2>
+      <p>You strengthened the memory pathways that make confident cueing feel natural.</p>
+      <div class="earned"><strong>+<span id="earned-xp">0</span> XP</strong><span>earned today</span></div>
+      <button id="finish" class="primary">Back to home</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
