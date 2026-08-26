@@ -1,5 +1,5 @@
-const CACHE = "yoga-streak-v2";
-const ASSETS = ["./", "index.html", "styles.css", "app.js", "manifest.webmanifest", "icon.svg"];
+const CACHE = "yoga-streak-v3";
+const ASSETS = ["./", "index.html", "styles.css", "standing-poses.js", "app.js", "manifest.webmanifest", "icon.svg"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS))));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
 self.addEventListener("fetch", event => event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request))));

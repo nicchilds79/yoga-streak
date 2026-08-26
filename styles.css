@@ -76,6 +76,16 @@ h2 { font-size: 28px; line-height: 1.12; letter-spacing: -.035em; }
 .screen-heading h2 { margin-bottom: 0; }
 .pose-list { display: grid; gap: 12px; }
 .pose-card { padding: 17px; border: 1px solid var(--line); border-radius: 19px; background: white; }
+.family-heading { margin: 18px 2px 2px; color: var(--green); font-size: 15px; letter-spacing: .04em; }
+.pose-summary { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; width: 100%; padding: 0; border: 0; color: var(--ink); text-align: left; background: transparent; cursor: pointer; }
+.pose-symbol { font-size: 32px; }
+.pose-summary strong, .pose-summary small { display: block; }
+.pose-summary small { margin-top: 3px; color: #65766f; line-height: 1.3; }
+.pose-summary > b { color: var(--green); font-size: 23px; }
+.pose-details { padding-top: 15px; }
+.pose-details dl { margin-bottom: 0; }
+.pose-details dt { margin-top: 14px; color: var(--green); font-size: 12px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.pose-details dd { margin: 4px 0 0; color: #566860; font-size: 14px; line-height: 1.48; }
 .pose-title { display: flex; align-items: center; gap: 13px; }
 .pose-title span { font-size: 35px; }
 .pose-title h3 { margin: 0 0 2px; }
