@@ -1,0 +1,72 @@
+const BANDHAS = [
+  {
+    kind: "bandha", family: "The Bandhas", sanskrit: "Bandhas", phonetic: "BUN-dhahs", spoken: "bun dahs", english: "Introduction to the Energy Locks", emoji: "🔒",
+    hook: "Bandha means a lock, seal or bind: think of directing—not forcing—energy.",
+    focus: "Breath awareness, deep postural support and subtle internal engagement.",
+    aim: "To understand the traditional yogic idea of regulating and directing prana through internal locks.",
+    benefits: "Traditionally used to refine breath awareness, concentration and energetic control. These are yogic teachings, not guaranteed medical effects.",
+    start: "Begin seated comfortably with a long spine and an unforced, steady breath.",
+    action: "Learn each lock separately and gently before considering combinations or breath retention.",
+    cue: "Lengthen, soften, then engage only as much as you can without disturbing the breath.",
+    watch: "A bandha is not a maximal muscular squeeze. Release immediately if you feel pressure, pain, panic or dizziness.",
+    beginner: "Start with relaxed breathing and body awareness under a qualified teacher; no breath retention is needed.",
+    advanced: "Breath retention and combined locks belong in supervised pranayama practice.",
+    contra: "Seek individual guidance during pregnancy or with cardiovascular, blood-pressure, eye-pressure, abdominal, pelvic-floor or respiratory concerns."
+  },
+  {
+    kind: "bandha", family: "The Bandhas", sanskrit: "Mūla Bandha", phonetic: "MOO-lah BUN-dhah", spoken: "moo lah bun dah", english: "Root Lock", emoji: "🌱",
+    hook: "Mūla means root: picture a subtle lift from the base of the pelvis.",
+    focus: "Pelvic-floor awareness and deep postural support.",
+    aim: "To explore a refined inward-and-upward pelvic-floor engagement without gripping.",
+    benefits: "Traditionally associated with steadiness, containment and directing energy upward.",
+    start: "Sit comfortably with the pelvis neutral, spine tall, jaw soft and breath easy.",
+    action: "On a gentle exhale, sense the centre of the pelvic floor drawing subtly inward and upward; soften fully on release.",
+    cue: "Imagine lifting a tissue gently through the centre of a tissue box.",
+    watch: "Do not clench the buttocks, grip the abdomen, hold the breath or bear down.",
+    beginner: "Practise finding and completely releasing a very light lift for one or two breaths.",
+    advanced: "Coordinate the subtle lift with teacher-led pranayama only after you can breathe and release freely.",
+    contra: "Avoid force with pelvic pain, pelvic-floor overactivity or after pelvic/abdominal surgery; seek specialist guidance during pregnancy or postpartum."
+  },
+  {
+    kind: "bandha", family: "The Bandhas", sanskrit: "Uḍḍīyāna Bandha", phonetic: "ood-dee-YAH-nah BUN-dhah", spoken: "ood dee yah nah bun dah", english: "Upward-Flying Abdominal Lock", emoji: "⬆️",
+    hook: "Uḍḍīyāna means to fly upward: the abdomen draws inward and up after exhaling.",
+    focus: "Deep abdominal wall, diaphragm awareness and breath control.",
+    aim: "To learn the traditional abdominal lock performed after a complete, comfortable exhalation.",
+    benefits: "Traditionally described as directing energy upward and developing breath control; medical benefits should not be assumed.",
+    start: "Learn first with a qualified teacher, usually in a supported standing or upright seated position and on an empty stomach.",
+    action: "Exhale comfortably, pause without inhaling, then gently draw the abdominal wall inward and upward. Release before inhaling.",
+    cue: "Empty, pause, lift gently, release completely—then inhale.",
+    watch: "Never practise after an inhale, force the exhale, strain, or hold until urgent. Stop immediately if dizzy or uncomfortable.",
+    beginner: "Learn the shape and release with a teacher; use ordinary relaxed breathing until instructed in retention.",
+    advanced: "Longer retention or combining with other bandhas is an advanced, supervised pranayama practice.",
+    contra: "Do not practise during pregnancy. Avoid with uncontrolled blood pressure, cardiovascular disease, glaucoma, hernia, significant digestive/abdominal conditions or recent abdominal surgery unless medically cleared and expertly supervised."
+  },
+  {
+    kind: "bandha", family: "The Bandhas", sanskrit: "Jālandhara Bandha", phonetic: "jah-lun-DHAH-rah BUN-dhah", spoken: "jah lun dhaa rah bun dah", english: "Throat Lock", emoji: "🫧",
+    hook: "Think long neck first, then a gentle chin nod—not a collapsed throat.",
+    focus: "Neck alignment, upper chest and throat awareness.",
+    aim: "To create the traditional throat seal used in instructed pranayama without compressing the neck.",
+    benefits: "Traditionally used to contain and regulate energy during pranayama and support concentration.",
+    start: "Sit upright with the head centred, sternum gently lifted, shoulders relaxed and back of the neck long.",
+    action: "Draw the chin slightly back, keep length through the neck, then lower the chin gently toward the upper chest as instructed.",
+    cue: "Lift the heart, slide the chin back, then nod softly while keeping space in the throat.",
+    watch: "Do not jut the chin, round the upper back, squeeze the throat or force chin to chest.",
+    beginner: "Practise neutral head alignment and a tiny chin nod while breathing normally.",
+    advanced: "Use within teacher-led breath retention only when the neck remains comfortable and the release is smooth.",
+    contra: "Avoid with acute neck pain or injury, dizziness, uncontrolled blood pressure or eye-pressure concerns; do not use in breath retention without appropriate instruction."
+  },
+  {
+    kind: "bandha", family: "The Bandhas", sanskrit: "Mahā Bandha", phonetic: "mah-HAH BUN-dhah", spoken: "mah hah bun dah", english: "Great Lock", emoji: "✨",
+    hook: "Mahā means great: it combines the root, abdominal and throat locks.",
+    focus: "Integrated pelvic-floor, abdominal, respiratory and neck awareness.",
+    aim: "To understand the advanced combination of Mūla, Uḍḍīyāna and Jālandhara Bandha.",
+    benefits: "Traditional teachings associate the combined lock with concentrated pranic control and deep focus; it is not a medical treatment.",
+    start: "Only after each component has been learned separately and comfortably with a qualified teacher.",
+    action: "Follow the precise breath, engagement, release and recovery sequence given by your teacher; release all locks before the next inhale.",
+    cue: "Three locks, one calm sequence—never sacrifice ease for duration.",
+    watch: "Do not self-teach, rush the sequence, strain during retention or practise when unwell.",
+    beginner: "Study the names, locations and purposes; practise relaxed breathing rather than the combined lock.",
+    advanced: "Practise only as a supervised pranayama technique with an experienced teacher.",
+    contra: "Not for pregnancy. Avoid with cardiovascular or uncontrolled blood-pressure conditions, glaucoma, hernia, significant abdominal/pelvic-floor issues, respiratory instability or recent surgery unless specifically cleared and supervised."
+  }
+];
